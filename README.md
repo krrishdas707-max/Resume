@@ -1,2 +1,0 @@
-# Resume
-all about me
