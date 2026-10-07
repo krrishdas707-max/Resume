@@ -27,7 +27,7 @@ section{padding:12vw 7vw;border-top:1px solid var(--line)}.section-head{display:
 .outside{display:grid;grid-template-columns:minmax(260px,1fr) minmax(300px,1fr);gap:8vw;align-items:center}.boxing{min-height:520px;border:1px solid var(--line);background:#090909;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;position:relative;overflow:hidden;padding:0}.boxing:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 35%,rgba(0,0,0,.82) 100%);z-index:1;pointer-events:none}.boxing img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center top;filter:grayscale(.12) contrast(1.05);transform:scale(1.01);transition:transform .8s ease}.boxing:hover img{transform:scale(1.045)}.boxing-caption{position:relative;z-index:2;width:100%;padding:24px 28px 22px;box-sizing:border-box}.boxing-caption .label{display:block;font:10px "DM Mono";letter-spacing:.24em;color:#aaa;margin-bottom:7px}.boxing-caption .name{display:block;font-size:clamp(28px,3vw,42px);font-weight:800;letter-spacing:-.04em;color:#fff}.outside h2{font-size:clamp(45px,6vw,90px);line-height:.92;letter-spacing:-.06em;margin:0 0 30px}.outside p{color:#999;line-height:1.8;max-width:500px}@media(max-width:760px){.outside{grid-template-columns:1fr;gap:42px}.boxing{min-height:430px;height:72vw;max-height:560px}.boxing-caption{padding:20px}.boxing-caption .name{font-size:32px}.outside h2{font-size:clamp(42px,13vw,68px)}}
 .contact{min-height:85vh;display:flex;flex-direction:column;justify-content:space-between}.contact h2{font-size:clamp(65px,12vw,180px);line-height:.78;letter-spacing:-.08em;margin:0}.contact h2 span{color:transparent;-webkit-text-stroke:1px #777}.contact-row{display:flex;justify-content:space-between;gap:30px;align-items:end}.contact-row p{color:#888;max-width:430px;line-height:1.7}.contact-btn{font:11px "DM Mono";border:1px solid #555;padding:17px 22px;transition:.3s}.contact-btn:hover{background:var(--accent);color:#080808;border-color:var(--accent)}footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#666;font:10px "DM Mono"}
 .reveal{opacity:0;transform:translateY(35px);transition:opacity .9s,transform .9s}.reveal.visible{opacity:1;transform:none}
-@media(max-width:760px){nav .links{gap:12px}nav .links a:nth-child(2){display:none}.hero{padding-top:16vh}.hero h1{font-size:23vw}.hero-bottom,.contact-row{flex-direction:column;align-items:flex-start}.about-grid,.outside{grid-template-columns:1fr}.work-grid{display:block}.project{min-height:420px;margin-bottom:15px}.services{grid-template-columns:1fr}.service{border-right:0;border-bottom:1px solid var(--line)}.service:last-child{border-bottom:0}.boxing{min-height:360px}section{padding:20vw 6vw}.hero{padding-left:6vw;padding-right:6vw}}
+@media(max-width:760px){nav .links{gap:12px}nav .links a:nth-child(2){display:none}.hero{padding-top:16vh}.hero h1{font-size:23vw}.hero-bottom,.contact-row{flex-direction:column;align-items:flex-start}.about-grid,.outside{grid-template-columns:1fr}.work-grid{display:block}.project{min-height:420px;margin-bottom:15px}.services{grid-template-columns:1fr}.service{border-right:0;border-bottom:1px solid var(--line)}.service:last-child{border-bottom:0}section{padding:20vw 6vw}.hero{padding-left:6vw;padding-right:6vw}}
 
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;opacity:.72;filter:contrast(1.08) saturate(.7)}
 .hero-overlay{position:absolute!important;inset:0!important;background:rgba(0,0,0,.52)!important;z-index:1!important;pointer-events:none!important;}
@@ -178,10 +178,17 @@ section{min-height:100svh;display:flex;flex-direction:column;justify-content:cen
 @media(prefers-reduced-motion:reduce){.loader-core,.loader-logo,.loader-sub b{animation:none!important}}
 </style>
 </head>
-<body><div class="cursor"></div><div class="cursor-ring"></div>
+
+<body>
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+
 <div class="loader" id="gameLoader" aria-label="Loading portfolio">
   <div class="loader-scan"></div>
-  <div class="loader-corner tl"></div><div class="loader-corner tr"></div><div class="loader-corner bl"></div><div class="loader-corner br"></div>
+  <div class="loader-corner tl"></div>
+  <div class="loader-corner tr"></div>
+  <div class="loader-corner bl"></div>
+  <div class="loader-corner br"></div>
   <div class="loader-core">
     <div class="loader-topline"><span>UTSAV // CREATIVE SYSTEM</span><span id="loaderPct">00%</span></div>
     <div class="loader-logo">UTSAV<span>.</span></div>
@@ -190,17 +197,39 @@ section{min-height:100svh;display:flex;flex-direction:column;justify-content:cen
     <div class="loader-meta"><span>DESIGN</span><span>FILM</span><span>EXPERIMENT</span><span>v12.0</span></div>
   </div>
   <div class="loader-flash"></div>
-</div><div class="noise"></div>
-<nav><a class="brand" href="#">UTSAV.</a><div class="links"><a href="#work">WORK</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></div></nav>
+</div>
+
+<div class="noise"></div>
+
+<nav>
+  <a class="brand" href="#">UTSAV.</a>
+  <div class="links">
+    <a href="#work">WORK</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+</nav>
 
 <main>
+
 <header class="hero media-slide" data-bg="hero">
-  <img class="hero-poster" src="hero-poster.jpg" alt="" aria-hidden="true"><video class="hero-video bg-media" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg"><source src="7204567-uhd_3840_2160_24fps.mp4" type="video/mp4"></video>
-  <div class="hero-video-overlay"></div><div class="hero-vignette"></div>
+  <img class="hero-poster" src="hero-poster.jpg" alt="" aria-hidden="true">
+  <video class="hero-video bg-media" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg">
+    <source src="7204567-uhd_3840_2160_24fps.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-video-overlay"></div>
+  <div class="hero-vignette"></div>
+
   <div class="hero-content">
     <div class="eyebrow magnetic">Graphic Designer / Filmmaker / Visual Storyteller</div>
+
     <div>
-      <h1 class="hero-title"><span class="solid">UTSAV</span><span class="outline">DAS.</span></h1>
+      <h1 class="hero-title">
+        <span class="solid">UTSAV</span>
+        <span class="outline">DAS.</span>
+      </h1>
+
       <div class="hero-bottom">
         <p class="hero-copy">A creator in progress. I design visuals, build stories and keep experimenting until something worth remembering appears.</p>
         <div class="scroll">SCROLL TO DISCOVER ↓</div>
@@ -210,78 +239,189 @@ section{min-height:100svh;display:flex;flex-direction:column;justify-content:cen
 </header>
 
 <section id="about" class="media-slide about-slide" data-bg="portrait">
-  <div class="section-media"><img src="WhatsApp Image 2026-10-06 at 2.32.16 PM.jpeg" alt=""></div><div class="section-shade"></div>
-  <div class="section-head"><h2 class="section-title">01 / THE CREATOR</h2><span class="section-no">ABOUT</span></div>
+  <div class="section-media">
+    <img src="WhatsApp Image 2026-10-06 at 2.32.16 PM.jpeg" alt="">
+  </div>
+  <div class="section-shade"></div>
+
+  <div class="section-head">
+    <h2 class="section-title">01 / THE CREATOR</h2>
+    <span class="section-no">ABOUT</span>
+  </div>
+
   <div class="about-grid">
     <div class="reveal">
       <p class="statement">I'm still figuring it out. <em>And that's the point.</em></p>
+
       <div class="about-copy">
-        <p>I'm Utsav — a graphic designer and filmmaker from Assam, currently experimenting with the many directions creativity can take me.</p>
-        <p>I'm not the most experienced person in the room. <strong>I'm the person learning fast enough to catch up.</strong></p>
+        <p>I'm Utsav — an 18-year-old graphic designer and filmmaker from Assam, currently pursuing Class 12 while building my creative path.</p>
+
+        <p>Alongside school, I've already explored freelancing, working on real creative projects and learning what it takes to turn ideas into work people can actually use.</p>
+
+        <p><strong>I'm not the most experienced person in the room. I'm the person learning fast enough to catch up.</strong></p>
+
         <p>I like dark worlds, cinematic frames, visual hierarchy and ideas that feel slightly outside the ordinary.</p>
       </div>
     </div>
+
     <div class="about-photo-block reveal">
-      <div class="about-photo"><img src="WhatsApp Image 2026-10-06 at 2.32.16 PM.jpeg" alt="Utsav Das portrait"></div>
+      <div class="about-photo">
+        <img src="WhatsApp Image 2026-10-06 at 2.32.16 PM.jpeg" alt="Utsav Das portrait">
+      </div>
       <div class="about-photo-name">UTSAV DAS</div>
     </div>
   </div>
 </section>
 
-
 <section id="work" class="media-slide work-slide" data-bg="rockstar">
-  <div class="section-media"><img src="IMG-20260131-WA0012.jpg" alt=""></div><div class="section-shade"></div>
-  <div class="section-head"><h2 class="section-title">02 / MY CREATIONS</h2><span class="section-no">04 / 12 SHOWN</span></div>
-  <div class="work-grid creations-grid">
-    <a class="project creation-image reveal" href="#" aria-label="Tanjiro artwork">
-      <div class="creation-img"><img src="IMG-20251020-WA0013.jpg" alt="Tanjiro poster design"></div>
-      <div class="project-info"><div class="project-no">01</div><div class="project-name">TANJIRO</div><div class="project-meta">Poster Design / Typography</div></div>
-    </a>
-    <a class="project creation-image reveal" href="#" aria-label="Ferrari 488 GTB artwork">
-      <div class="creation-img"><img src="WA_1770989992816.jpeg" alt="Ferrari 488 GTB poster design"></div>
-      <div class="project-info"><div class="project-no">02</div><div class="project-name">488 GTB</div><div class="project-meta">Automotive Poster / Editorial Design</div></div>
-    </a>
-    <a class="project creation-image reveal" href="#" aria-label="Rockstar artwork">
-      <div class="creation-img"><img src="IMG-20260131-WA0012.jpg" alt="Rockstar music poster design"></div>
-      <div class="project-info"><div class="project-no">03</div><div class="project-name">ROCKSTAR</div><div class="project-meta">Music Poster / Collage Design</div></div>
-    </a>
-    <a class="project creation-image reveal" href="#" aria-label="Flixosol recruitment artwork">
-      <div class="creation-img"><img src="floxosol flyer.jpg" alt="Flixosol recruitment flyer"></div>
-      <div class="project-info"><div class="project-no">04</div><div class="project-name">FLIXOSOL</div><div class="project-meta">Recruitment Campaign / Art Direction</div></div>
-    </a>
+  <div class="section-media">
+    <img src="IMG-20260131-WA0012.jpg" alt="">
   </div>
+  <div class="section-shade"></div>
+
+  <div class="section-head">
+    <h2 class="section-title">02 / MY CREATIONS</h2>
+    <span class="section-no">04 / 12 SHOWN</span>
+  </div>
+
+  <div class="work-grid creations-grid">
+
+    <a class="project creation-image reveal" href="#" aria-label="Tanjiro artwork">
+      <div class="creation-img">
+        <img src="IMG-20251020-WA0013.jpg" alt="Tanjiro poster design">
+      </div>
+      <div class="project-info">
+        <div class="project-no">01</div>
+        <div class="project-name">TANJIRO</div>
+        <div class="project-meta">Poster Design / Typography</div>
+      </div>
+    </a>
+
+    <a class="project creation-image reveal" href="#" aria-label="Ferrari 488 GTB artwork">
+      <div class="creation-img">
+        <img src="WA_1770989992816.jpeg" alt="Ferrari 488 GTB poster design">
+      </div>
+      <div class="project-info">
+        <div class="project-no">02</div>
+        <div class="project-name">488 GTB</div>
+        <div class="project-meta">Automotive Poster / Editorial Design</div>
+      </div>
+    </a>
+
+    <a class="project creation-image reveal" href="#" aria-label="Rockstar artwork">
+      <div class="creation-img">
+        <img src="IMG-20260131-WA0012.jpg" alt="Rockstar music poster design">
+      </div>
+      <div class="project-info">
+        <div class="project-no">03</div>
+        <div class="project-name">ROCKSTAR</div>
+        <div class="project-meta">Music Poster / Collage Design</div>
+      </div>
+    </a>
+
+    <a class="project creation-image reveal" href="#" aria-label="Flixosol recruitment artwork">
+      <div class="creation-img">
+        <img src="floxosol flyer.jpg" alt="Flixosol recruitment flyer">
+      </div>
+      <div class="project-info">
+        <div class="project-no">04</div>
+        <div class="project-name">FLIXOSOL</div>
+        <div class="project-meta">Recruitment Campaign / Art Direction</div>
+      </div>
+    </a>
+
+  </div>
+
   <div class="more-creations reveal">
     <span>08 MORE PROJECTS IN THE ARCHIVE</span>
     <span>COMING SOON →</span>
   </div>
 </section>
 
-
 <section class="media-slide services-slide" data-bg="flixosol">
-  <div class="section-media"><img src="floxosol flyer.jpg" alt=""></div><div class="section-shade"></div>
-  <div class="section-head"><h2 class="section-title">03 / WHAT I BUILD</h2><span class="section-no">SERVICES</span></div>
+  <div class="section-media">
+    <img src="floxosol flyer.jpg" alt="">
+  </div>
+  <div class="section-shade"></div>
+
+  <div class="section-head">
+    <h2 class="section-title">03 / WHAT I BUILD</h2>
+    <span class="section-no">SERVICES</span>
+  </div>
+
   <div class="services">
-    <article class="service reveal"><div class="service-no">01</div><h3>Graphic Design</h3><p>Campaign visuals, promotional graphics, compositions and visual systems built around hierarchy and impact.</p></article>
-    <article class="service reveal"><div class="service-no">02</div><h3>Video</h3><p>Visual advertisements, promotional edits and cinematic content designed to make people stop scrolling.</p></article>
-    <article class="service reveal"><div class="service-no">03</div><h3>Film</h3><p>Short-form storytelling, visual direction and experimental cinema where atmosphere matters as much as dialogue.</p></article>
+    <article class="service reveal">
+      <div class="service-no">01</div>
+      <h3>Graphic Design</h3>
+      <p>Campaign visuals, promotional graphics, compositions and visual systems built around hierarchy and impact.</p>
+    </article>
+
+    <article class="service reveal">
+      <div class="service-no">02</div>
+      <h3>Video</h3>
+      <p>Visual advertisements, promotional edits and cinematic content designed to make people stop scrolling.</p>
+    </article>
+
+    <article class="service reveal">
+      <div class="service-no">03</div>
+      <h3>Film</h3>
+      <p>Short-form storytelling, visual direction and experimental cinema where atmosphere matters as much as dialogue.</p>
+    </article>
   </div>
 </section>
 
 <section class="media-slide outside-slide" data-bg="ferrari">
-  <div class="section-media"><img src="WA_1770989992816.jpeg" alt=""></div><div class="section-shade"></div>
+  <div class="section-media">
+    <img src="WA_1770989992816.jpeg" alt="">
+  </div>
+  <div class="section-shade"></div>
+
   <div class="outside">
-    <div class="boxing reveal"><img src="images.jpg" alt="Utsav Das"><div class="boxing-caption"><span class="label">OUTSIDE THE SCREEN / DISCIPLINE</span></div></div>
-    <div class="reveal"><h2>CREATIVITY<br><span style="color:transparent;-webkit-text-stroke:1px #777">NEEDS</span><br>DISCIPLINE.</h2><p>Designer by practice. Filmmaker by obsession. Fighter by discipline. The things I learn outside a screen follow me back into the work.</p></div>
+
+    <div class="boxing reveal">
+      <img src="images.jpg" alt="Utsav Das">
+      <div class="boxing-caption">
+        <span class="label">OUTSIDE THE SCREEN / DISCIPLINE</span>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h2>
+        CREATIVITY<br>
+        <span style="color:transparent;-webkit-text-stroke:1px #777">NEEDS</span><br>
+        DISCIPLINE.
+      </h2>
+
+      <p>Designer by practice. Filmmaker by obsession. Fighter by discipline. The things I learn outside a screen follow me back into the work.</p>
+    </div>
+
   </div>
 </section>
 
 <section id="contact" class="contact media-slide contact-slide" data-bg="tanjiro">
-  <div class="section-media"><img src="IMG-20251020-WA0013.jpg" alt=""></div><div class="section-shade"></div>
-  <div><div class="eyebrow">05 / LET'S BUILD</div><h2>NEED A<br><span>CREATIVE?</span></h2></div>
-  <div class="contact-row"><p>For design work, video advertisements, creative collaborations or film projects — I'm always open to making something worth remembering.</p><a class="contact-btn" href="https://wa.me/918135055154">MESSAGE ON WHATSAPP ↗</a></div>
+  <div class="section-media">
+    <img src="IMG-20251020-WA0013.jpg" alt="">
+  </div>
+  <div class="section-shade"></div>
+
+  <div>
+    <div class="eyebrow">05 / LET'S BUILD</div>
+    <h2>NEED A<br><span>CREATIVE?</span></h2>
+  </div>
+
+  <div class="contact-row">
+    <p>For design work, video advertisements, creative collaborations or film projects — I'm always open to making something worth remembering.</p>
+    <a class="contact-btn" href="https://wa.me/918135055154">MESSAGE ON WHATSAPP ↗</a>
+  </div>
 </section>
+
 </main>
-<footer><span>© UTSAV</span><span>DESIGN / FILM / EXPERIMENT</span></footer>
+
+<footer>
+  <span>© UTSAV</span>
+  <span>DESIGN / FILM / EXPERIMENT</span>
+</footer>
+
 <script>
 (function(){
   const loader=document.getElementById('gameLoader');
@@ -291,38 +431,129 @@ section{min-height:100svh;display:flex;flex-direction:column;justify-content:cen
   const states=['BOOTING VISUAL ENGINE','LOADING CREATIVE MEMORY','CALIBRATING MOTION','BUILDING THE WORLD','READY'];
   let start=performance.now();
   const duration=2300;
+
   function tick(now){
     const p=Math.min(1,(now-start)/duration);
     const eased=1-Math.pow(1-p,3);
     const value=Math.round(eased*100);
+
     if(bar) bar.style.width=value+'%';
     if(pct) pct.textContent=String(value).padStart(2,'0')+'%';
     if(status) status.textContent=states[Math.min(states.length-1,Math.floor(p*states.length))];
-    if(p<1){requestAnimationFrame(tick)}
-    else{setTimeout(()=>loader.classList.add('hide'),320)}
+
+    if(p<1){
+      requestAnimationFrame(tick)
+    }else{
+      setTimeout(()=>loader.classList.add('hide'),320)
+    }
   }
+
   window.addEventListener('load',()=>requestAnimationFrame(tick),{once:true});
 })();
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)e.target.classList.add('visible')
+}),{threshold:.12});
+
 document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
 </script>
 
 <script>
 
 const cursor=document.querySelector('.cursor'), ring=document.querySelector('.cursor-ring');
+
 let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
-addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-(function cursorLoop(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(cursorLoop)})();
-document.querySelectorAll('a,button,.project').forEach(el=>el.addEventListener('mouseenter',()=>{ring.style.width='68px';ring.style.height='68px';ring.style.background='rgba(255,255,255,.06)'}));
-document.querySelectorAll('a,button,.project').forEach(el=>el.addEventListener('mouseleave',()=>{ring.style.width='42px';ring.style.height='42px';ring.style.background='transparent'}));
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');e.target.closest('.media-slide')?.classList.add('in-view')}}),{threshold:.14});
+
+addEventListener('pointermove',e=>{
+  mx=e.clientX;
+  my=e.clientY;
+  cursor.style.left=mx+'px';
+  cursor.style.top=my+'px'
+});
+
+(function cursorLoop(){
+  rx+=(mx-rx)*.14;
+  ry+=(my-ry)*.14;
+  ring.style.left=rx+'px';
+  ring.style.top=ry+'px';
+  requestAnimationFrame(cursorLoop)
+})();
+
+document.querySelectorAll('a,button,.project').forEach(el=>el.addEventListener('mouseenter',()=>{
+  ring.style.width='68px';
+  ring.style.height='68px';
+  ring.style.background='rgba(255,255,255,.06)'
+}));
+
+document.querySelectorAll('a,button,.project').forEach(el=>el.addEventListener('mouseleave',()=>{
+  ring.style.width='42px';
+  ring.style.height='42px';
+  ring.style.background='transparent'
+}));
+
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('visible');
+    e.target.closest('.media-slide')?.classList.add('in-view')
+  }
+}),{threshold:.14});
+
 document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
 document.querySelectorAll('.media-slide').forEach(x=>io.observe(x));
-const nav=document.querySelector('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80),{passive:true});
+
+const nav=document.querySelector('nav');
+
+addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scrollY>80)
+},{passive:true});
+
 // subtle parallax for background media
-addEventListener('scroll',()=>{document.querySelectorAll('.media-slide').forEach(sec=>{const r=sec.getBoundingClientRect(), mid=innerHeight/2, delta=(r.top+r.height/2-mid)*-.035;const bg=sec.querySelector('.section-media');if(bg) bg.style.transform=`translate3d(0,${delta}px,0)`})},{passive:true});
+addEventListener('scroll',()=>{
+  document.querySelectorAll('.media-slide').forEach(sec=>{
+    const r=sec.getBoundingClientRect(),
+    mid=innerHeight/2,
+    delta=(r.top+r.height/2-mid)*-.035,
+    bg=sec.querySelector('.section-media');
+
+    if(bg) bg.style.transform=`translate3d(0,${delta}px,0)`
+  })
+},{passive:true});
+
 // Magnetic micro-interaction
-for(const el of document.querySelectorAll('.magnetic')){el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.08}px,${(e.clientY-r.top-r.height/2)*.08}px)`});el.addEventListener('pointerleave',()=>el.style.transform='')}
-</script></body>
+for(const el of document.querySelectorAll('.magnetic')){
+  el.addEventListener('pointermove',e=>{
+    const r=el.getBoundingClientRect();
+    el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.08}px,${(e.clientY-r.top-r.height/2)*.08}px)`
+  });
+
+  el.addEventListener('pointerleave',()=>{
+    el.style.transform=''
+  })
+}
+
+</script>
+
+</body>
 </html>
-<style>@media(max-width:760px){.hero-content{min-height:calc(100svh - 80px)!important;padding-top:14vh!important}.hero-bottom{grid-template-columns:1fr!important;gap:24px!important}.hero-copy{max-width:90vw!important}.scroll{justify-self:start!important}}</style>
+
+<style>
+@media(max-width:760px){
+  .hero-content{
+    min-height:calc(100svh - 80px)!important;
+    padding-top:14vh!important
+  }
+
+  .hero-bottom{
+    grid-template-columns:1fr!important;
+    gap:24px!important
+  }
+
+  .hero-copy{
+    max-width:90vw!important
+  }
+
+  .scroll{
+    justify-self:start!important
+  }
+}
+</style>
