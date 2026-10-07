@@ -6,7 +6,6 @@
 <meta name="description" content="Utsav — graphic designer, filmmaker and visual storyteller.">
 <title>UTSAV DAS — PORTFOLIO</title>
 
-<!-- FAVICON -->
 <link rel="icon" type="image/x-icon" href="3-2-resume-png_64x64.ico">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +13,40 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root{--bg:#080808;--fg:#eee;--muted:#8b8b8b;--line:#242424;--accent:#d7ff43;--card:#101010}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
+
+:root{
+--bg:#080808;
+--fg:#eee;
+--muted:#8b8b8b;
+--line:#242424;
+--accent:#d7ff43;
+--card:#101010
+}
+
+*{
+box-sizing:border-box
+}
+
+html{
+scroll-behavior:smooth
+}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--fg);
+font-family:Manrope,Arial,sans-serif;
+overflow-x:hidden
+}
+
+a{
+color:inherit;
+text-decoration:none
+}
+
+button{
+font:inherit
+}
 
 .noise{
 position:fixed;
@@ -102,6 +129,9 @@ color:#aaa
 nav .links a:hover{
 color:#fff
 }
+
+
+/* HERO */
 
 .hero-video{
 position:absolute!important;
@@ -199,6 +229,9 @@ writing-mode:vertical-rl;
 letter-spacing:.15em
 }
 
+
+/* GENERAL SECTIONS */
+
 section{
 padding:12vw 7vw;
 border-top:1px solid var(--line)
@@ -235,6 +268,9 @@ margin:0
 font-style:normal;
 color:var(--accent)
 }
+
+
+/* ABOUT */
 
 .about-grid{
 display:grid;
@@ -276,6 +312,9 @@ content:""
 .about-photo:after{
 display:none
 }
+
+
+/* MY CREATIONS */
 
 .work-grid{
 display:grid;
@@ -328,12 +367,26 @@ transform:scale(1.06)
 
 .p1{
 background:
-radial-gradient(circle at 70% 25%,#777 0 2%,transparent 3%),
-linear-gradient(125deg,#111,#292929 50%,#0a0a0a)
+radial-gradient(
+circle at 70% 25%,
+#777 0 2%,
+transparent 3%
+),
+linear-gradient(
+125deg,
+#111,
+#292929 50%,
+#0a0a0a
+)
 }
 
 .p2{
-background:linear-gradient(160deg,#181818,#070707);
+background:
+linear-gradient(
+160deg,
+#181818,
+#070707
+);
 }
 
 .p2:after{
@@ -349,19 +402,79 @@ color:#161616
 
 .p3{
 background:
-radial-gradient(circle at 25% 30%,#555,transparent 18%),
-linear-gradient(135deg,#171717,#050505)
+radial-gradient(
+circle at 25% 30%,
+#555,
+transparent 18%
+),
+linear-gradient(
+135deg,
+#171717,
+#050505
+)
 }
 
 .p4{
-background:linear-gradient(120deg,#222,#0a0a0a 60%)
+background:
+linear-gradient(
+120deg,
+#222,
+#0a0a0a 60%
+)
 }
+
+
+/* IMPORTANT: ORIGINAL CREATION IMAGE SYSTEM RESTORED */
+
+.creations-grid .project{
+min-height:600px
+}
+
+.creation-img{
+position:absolute;
+inset:0;
+background:#0b0b0b;
+overflow:hidden
+}
+
+.creation-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+filter:saturate(.88) contrast(1.04);
+transition:transform .9s,filter .6s
+}
+
+.creation-image:hover .creation-img img{
+transform:scale(1.045);
+filter:saturate(1) contrast(1.06)
+}
+
+.creation-image .project-info{
+z-index:2
+}
+
+.more-creations{
+margin-top:25px;
+padding:24px 0;
+border-top:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+color:#777;
+font:10px "DM Mono";
+letter-spacing:.12em
+}
+
 
 .project-info{
 position:relative;
 padding:28px;
 width:100%;
-background:linear-gradient(transparent,rgba(0,0,0,.9));
+background:linear-gradient(
+transparent,
+rgba(0,0,0,.9)
+);
 padding-top:100px
 }
 
@@ -392,6 +505,9 @@ border-radius:99px;
 font:9px "DM Mono";
 color:#bbb
 }
+
+
+/* SERVICES */
 
 .services{
 display:grid;
@@ -425,6 +541,9 @@ color:#888;
 line-height:1.7;
 font-size:14px
 }
+
+
+/* OUTSIDE */
 
 .outside{
 display:grid;
@@ -491,7 +610,12 @@ color:#aaa;
 margin-bottom:7px
 }
 
-/* UTSAV DAS NAME REMOVED FROM UNDER THE IMAGE */
+
+/* UTSAV DAS REMOVED — LABEL ONLY */
+
+.boxing-caption .name{
+display:none
+}
 
 .outside h2{
 font-size:clamp(45px,6vw,90px);
@@ -506,26 +630,8 @@ line-height:1.8;
 max-width:500px
 }
 
-@media(max-width:760px){
-.outside{
-grid-template-columns:1fr;
-gap:42px
-}
 
-.boxing{
-min-height:430px;
-height:72vw;
-max-height:560px
-}
-
-.boxing-caption{
-padding:20px
-}
-
-.outside h2{
-font-size:clamp(42px,13vw,68px)
-}
-}
+/* CONTACT */
 
 .contact{
 min-height:85vh;
@@ -581,6 +687,9 @@ color:#666;
 font:10px "DM Mono"
 }
 
+
+/* REVEAL */
+
 .reveal{
 opacity:0;
 transform:translateY(35px);
@@ -592,7 +701,11 @@ opacity:1;
 transform:none
 }
 
+
+/* MOBILE */
+
 @media(max-width:760px){
+
 nav .links{
 gap:12px
 }
@@ -609,12 +722,14 @@ padding-top:16vh
 font-size:23vw
 }
 
-.hero-bottom,.contact-row{
+.hero-bottom,
+.contact-row{
 flex-direction:column;
 align-items:flex-start
 }
 
-.about-grid,.outside{
+.about-grid,
+.outside{
 grid-template-columns:1fr
 }
 
@@ -625,6 +740,10 @@ display:block
 .project{
 min-height:420px;
 margin-bottom:15px
+}
+
+.creations-grid .project{
+min-height:500px
 }
 
 .services{
@@ -652,15 +771,143 @@ padding:20vw 6vw
 padding-left:6vw;
 padding-right:6vw
 }
+
+.boxing-caption{
+padding:20px
 }
 
+}
+
+
+/* HERO FALLBACK / STABILITY */
+
+.hero-video{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-3;
+opacity:.72;
+filter:contrast(1.08) saturate(.7)
+}
+
+.hero-overlay{
+position:absolute!important;
+inset:0!important;
+background:rgba(0,0,0,.52)!important;
+z-index:1!important;
+pointer-events:none!important
+}
+
+.hero:after{
+content:"";
+position:absolute;
+inset:0;
+z-index:-1;
+background:
+radial-gradient(
+circle at 70% 35%,
+transparent 0,
+rgba(0,0,0,.25) 45%,
+rgba(0,0,0,.65) 100%
+);
+pointer-events:none
+}
+
+.project.empty{
+min-height:360px;
+background:#0b0b0b;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+border-style:dashed;
+color:#555
+}
+
+.project.empty:hover{
+transform:none;
+border-color:#555
+}
+
+.empty-mark{
+font:10px "DM Mono";
+letter-spacing:.2em;
+margin-bottom:18px
+}
+
+.empty-copy{
+font:11px "DM Mono";
+letter-spacing:.2em;
+color:#444
+}
+
+.archive-note{
+display:flex;
+justify-content:space-between;
+align-items:end;
+margin-top:70px;
+border-top:1px solid var(--line);
+padding-top:28px
+}
+
+.archive-note span{
+font:10px "DM Mono";
+color:#666;
+letter-spacing:.18em
+}
+
+.archive-note strong{
+font-size:clamp(34px,5vw,72px);
+line-height:.85;
+letter-spacing:-.06em;
+text-align:right
+}
+
+
+/* HERO VIGNETTE */
+
+.hero-video{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-3;
+filter:brightness(.16) contrast(1.12) saturate(.5);
+opacity:.72
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.86);
+z-index:-2
+}
+
+.hero-vignette{
+position:absolute!important;
+inset:0!important;
+background:
+radial-gradient(
+circle at center,
+rgba(0,0,0,.05),
+rgba(0,0,0,.72) 88%
+)!important;
+z-index:2!important;
+pointer-events:none!important;
+}
+
+
 /* V6 — eliminate post-entry dead space */
+
 .hero{
 height:100svh;
 height:100dvh;
 min-height:100svh;
 min-height:100dvh;
-overflow:hidden;
+overflow:hidden
 }
 
 .hero+section{
@@ -669,6 +916,7 @@ padding-top:10vw
 }
 
 @media(max-width:760px){
+
 .hero{
 height:100svh;
 height:100dvh;
@@ -679,10 +927,14 @@ padding-bottom:4vh
 .hero+section{
 padding-top:16vw
 }
+
 }
 
-/* V7 — stable hero rendering */
-html,body{
+
+/* V7 — stable hero */
+
+html,
+body{
 background:#080808
 }
 
@@ -732,12 +984,14 @@ z-index:2
 will-change:opacity
 }
 
-/* V8 — uploaded video is the first-slide background */
+
+/* V8 */
+
 .hero{
 position:relative!important;
 overflow:hidden!important;
 background:#000!important;
-isolation:isolate!important;
+isolation:isolate!important
 }
 
 .hero-video{
@@ -750,7 +1004,7 @@ z-index:-5!important;
 display:block!important;
 opacity:.28!important;
 filter:brightness(.24) contrast(1.08) saturate(.65)!important;
-pointer-events:none!important;
+pointer-events:none!important
 }
 
 .hero-video-overlay{
@@ -758,14 +1012,14 @@ position:absolute!important;
 inset:0!important;
 background:rgba(0,0,0,.68)!important;
 z-index:-4!important;
-pointer-events:none!important;
+pointer-events:none!important
 }
 
 .hero-vignette{
 position:absolute!important;
 inset:0!important;
 z-index:-3!important;
-pointer-events:none!important;
+pointer-events:none!important
 }
 
 .hero-content{
@@ -776,7 +1030,7 @@ flex-direction:column!important;
 justify-content:space-between!important;
 min-height:calc(100svh - 120px)!important;
 padding-top:18vh!important;
-padding-bottom:6vh!important;
+padding-bottom:6vh!important
 }
 
 .hero-bottom{
@@ -788,29 +1042,32 @@ align-items:end!important;
 gap:40px!important;
 opacity:1!important;
 visibility:visible!important;
-transform:none!important;
+transform:none!important
 }
 
-.hero-copy,.scroll{
+.hero-copy,
+.scroll{
 opacity:1!important;
 visibility:visible!important;
 display:block!important;
-color:#fff!important;
+color:#fff!important
 }
 
 .hero-copy{
 font-size:clamp(16px,1.35vw,22px)!important;
 line-height:1.45!important;
-text-shadow:0 2px 16px rgba(0,0,0,.9)!important;
+text-shadow:0 2px 16px rgba(0,0,0,.9)!important
 }
 
 .scroll{
 font-size:12px!important;
 letter-spacing:.16em!important;
-text-shadow:0 2px 12px rgba(0,0,0,.9)!important;
+text-shadow:0 2px 12px rgba(0,0,0,.9)!important
 }
 
-/* V10 — guaranteed visible hero image fallback */
+
+/* V10 — HERO IMAGE FALLBACK */
+
 .hero-poster{
 position:absolute!important;
 inset:0!important;
@@ -820,27 +1077,28 @@ object-fit:cover!important;
 z-index:0!important;
 display:block!important;
 filter:brightness(.34) contrast(1.08) saturate(.7)!important;
-transform:scale(1.06)!important;
+transform:scale(1.06)!important
 }
 
 .hero-video{
 z-index:1!important;
 opacity:.42!important;
-filter:brightness(.42) contrast(1.08) saturate(.7)!important;
+filter:brightness(.42) contrast(1.08) saturate(.7)!important
 }
 
 .hero-video-overlay{
 z-index:2!important;
-background:linear-gradient(
+background:
+linear-gradient(
 180deg,
 rgba(0,0,0,.62),
 rgba(0,0,0,.5) 45%,
 rgba(0,0,0,.82)
-)!important;
+)!important
 }
 
 .hero-vignette{
-z-index:3!important;
+z-index:3!important
 }
 
 .hero-content{
@@ -851,7 +1109,7 @@ flex-direction:column!important;
 justify-content:space-between!important;
 min-height:calc(100svh - 120px)!important;
 padding-top:18vh!important;
-padding-bottom:6vh!important;
+padding-bottom:6vh!important
 }
 
 .hero-bottom{
@@ -863,31 +1121,36 @@ align-items:end!important;
 gap:40px!important;
 opacity:1!important;
 visibility:visible!important;
-transform:none!important;
+transform:none!important
 }
 
-.hero-copy,.scroll{
+.hero-copy,
+.scroll{
 opacity:1!important;
 visibility:visible!important;
 display:block!important;
-color:#fff!important;
+color:#fff!important
 }
 
 .hero-copy{
 font-size:clamp(16px,1.35vw,22px)!important;
 line-height:1.45!important;
-text-shadow:0 2px 16px rgba(0,0,0,.9)!important;
+text-shadow:0 2px 16px rgba(0,0,0,.9)!important
 }
 
 .scroll{
 font-size:12px!important;
 letter-spacing:.16em!important;
-text-shadow:0 2px 12px rgba(0,0,0,.9)!important;
+text-shadow:0 2px 12px rgba(0,0,0,.9)!important
 }
+
 </style>
 
+
 <style>
-/* V5 CINEMATIC MOTION SYSTEM */
+
+/* CINEMATIC MOTION SYSTEM */
+
 :root{
 --accent:#d7ff43;
 --white:#f4f4f4;
@@ -909,7 +1172,8 @@ opacity:.035;
 background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
 }
 
-.cursor,.cursor-ring{
+.cursor,
+.cursor-ring{
 position:fixed;
 pointer-events:none;
 z-index:1000;
@@ -928,7 +1192,10 @@ background:white
 width:42px;
 height:42px;
 border:1px solid rgba(255,255,255,.65);
-transition:width .25s var(--ease),height .25s var(--ease),background .25s
+transition:
+width .25s var(--ease),
+height .25s var(--ease),
+background .25s
 }
 
 nav{
@@ -964,7 +1231,8 @@ background:rgba(0,0,0,.9)!important
 position:absolute;
 inset:0;
 z-index:-3;
-background:radial-gradient(
+background:
+radial-gradient(
 circle at 55% 42%,
 rgba(0,0,0,.18),
 rgba(0,0,0,.96) 82%
@@ -1028,14 +1296,17 @@ height:100%;
 object-fit:cover;
 filter:brightness(.24) saturate(.55) contrast(1.1);
 transform:scale(1.12);
-transition:transform 1.8s var(--ease),filter 1.2s
+transition:
+transform 1.8s var(--ease),
+filter 1.2s
 }
 
 .section-shade{
 position:absolute;
 inset:0;
 z-index:-2;
-background:linear-gradient(
+background:
+linear-gradient(
 180deg,
 rgba(0,0,0,.87),
 rgba(0,0,0,.68) 45%,
@@ -1070,7 +1341,9 @@ position:relative
 .section-title{
 transform:translateX(-60px);
 opacity:0;
-transition:transform 1s var(--ease),opacity 1s
+transition:
+transform 1s var(--ease),
+opacity 1s
 }
 
 .in-view .section-title{
@@ -1145,7 +1418,9 @@ box-shadow:0 30px 80px rgba(0,0,0,.5)
 }
 
 .creation-img img{
-transition:transform 1.3s var(--ease),filter 1s
+transition:
+transform 1.3s var(--ease),
+filter 1s
 }
 
 .project:hover .creation-img img{
@@ -1156,7 +1431,9 @@ filter:saturate(1.15) contrast(1.08) brightness(.82)
 .services .service{
 background:rgba(5,5,5,.22);
 backdrop-filter:blur(5px);
-transition:transform .7s var(--ease),background .5s
+transition:
+transform .7s var(--ease),
+background .5s
 }
 
 .services .service:hover{
@@ -1165,7 +1442,9 @@ background:rgba(5,5,5,.5)
 }
 
 .service h3{
-transition:transform .6s var(--ease),letter-spacing .6s
+transition:
+transform .6s var(--ease),
+letter-spacing .6s
 }
 
 .service:hover h3{
@@ -1191,7 +1470,9 @@ animation:slowSpin 16s linear infinite
 .contact h2{
 transform:scale(.94);
 opacity:0;
-transition:transform 1.3s var(--ease),opacity 1.3s
+transition:
+transform 1.3s var(--ease),
+opacity 1.3s
 }
 
 .in-view .contact h2{
@@ -1284,27 +1565,34 @@ text-shadow:0 0 25px rgba(215,255,67,.22)
 }
 
 @media(prefers-reduced-motion:reduce){
-*,*:before,*:after{
+
+*,
+*:before,
+*:after{
 animation:none!important;
 transition:none!important;
 scroll-behavior:auto!important
 }
 
-.cursor,.cursor-ring{
+.cursor,
+.cursor-ring{
 display:none
 }
 
 body{
 cursor:auto
 }
+
 }
 
 @media(max-width:760px){
+
 body{
 cursor:auto
 }
 
-.cursor,.cursor-ring{
+.cursor,
+.cursor-ring{
 display:none
 }
 
@@ -1327,9 +1615,12 @@ transform:none
 .creation-img img{
 filter:brightness(.72)
 }
+
 }
 
-/* V10 — guaranteed visible hero image fallback */
+
+/* HERO IMAGE FALLBACK */
+
 .hero-poster{
 position:absolute!important;
 inset:0!important;
@@ -1339,27 +1630,28 @@ object-fit:cover!important;
 z-index:0!important;
 display:block!important;
 filter:brightness(.34) contrast(1.08) saturate(.7)!important;
-transform:scale(1.06)!important;
+transform:scale(1.06)!important
 }
 
 .hero-video{
 z-index:1!important;
 opacity:.42!important;
-filter:brightness(.42) contrast(1.08) saturate(.7)!important;
+filter:brightness(.42) contrast(1.08) saturate(.7)!important
 }
 
 .hero-video-overlay{
 z-index:2!important;
-background:linear-gradient(
+background:
+linear-gradient(
 180deg,
 rgba(0,0,0,.62),
 rgba(0,0,0,.5) 45%,
 rgba(0,0,0,.82)
-)!important;
+)!important
 }
 
 .hero-vignette{
-z-index:3!important;
+z-index:3!important
 }
 
 .hero-content{
@@ -1370,7 +1662,7 @@ flex-direction:column!important;
 justify-content:space-between!important;
 min-height:calc(100svh - 120px)!important;
 padding-top:18vh!important;
-padding-bottom:6vh!important;
+padding-bottom:6vh!important
 }
 
 .hero-bottom{
@@ -1382,30 +1674,32 @@ align-items:end!important;
 gap:40px!important;
 opacity:1!important;
 visibility:visible!important;
-transform:none!important;
+transform:none!important
 }
 
-.hero-copy,.scroll{
+.hero-copy,
+.scroll{
 opacity:1!important;
 visibility:visible!important;
 display:block!important;
-color:#fff!important;
+color:#fff!important
 }
 
 .hero-copy{
 font-size:clamp(16px,1.35vw,22px)!important;
 line-height:1.45!important;
-text-shadow:0 2px 16px rgba(0,0,0,.9)!important;
+text-shadow:0 2px 16px rgba(0,0,0,.9)!important
 }
 
 .scroll{
 font-size:12px!important;
 letter-spacing:.16em!important;
-text-shadow:0 2px 12px rgba(0,0,0,.9)!important;
+text-shadow:0 2px 12px rgba(0,0,0,.9)!important
 }
-</style>
 
+</style>
 </head>
+
 
 <body>
 
@@ -1421,17 +1715,26 @@ text-shadow:0 2px 12px rgba(0,0,0,.9)!important;
 
 <div class="noise"></div>
 
+
 <nav>
-<a class="brand" href="#">UTSAV.</a>
+
+<a class="brand" href="#">
+UTSAV.
+</a>
 
 <div class="links">
 <a href="#work">WORK</a>
 <a href="#about">ABOUT</a>
 <a href="#contact">CONTACT</a>
 </div>
+
 </nav>
 
+
 <main>
+
+
+<!-- HERO -->
 
 <header class="hero media-slide" data-bg="hero">
 
@@ -1451,14 +1754,17 @@ playsinline
 preload="auto"
 poster="hero-poster.jpg"
 >
+
 <source
 src="7204567-uhd_3840_2160_24fps.mp4"
 type="video/mp4"
 >
+
 </video>
 
 <div class="hero-video-overlay"></div>
 <div class="hero-vignette"></div>
+
 
 <div class="hero-content">
 
@@ -1466,12 +1772,21 @@ type="video/mp4"
 Graphic Designer / Filmmaker / Visual Storyteller
 </div>
 
+
 <div>
 
 <h1 class="hero-title">
-<span class="solid">UTSAV</span>
-<span class="outline">DAS.</span>
+
+<span class="solid">
+UTSAV
+</span>
+
+<span class="outline">
+DAS.
+</span>
+
 </h1>
+
 
 <div class="hero-bottom">
 
@@ -1492,27 +1807,54 @@ SCROLL TO DISCOVER ↓
 </header>
 
 
-<section id="about" class="media-slide about-slide" data-bg="portrait">
+
+<!-- ABOUT -->
+
+<section
+id="about"
+class="media-slide about-slide"
+data-bg="portrait"
+>
 
 <div class="section-media">
-<img src="WhatsApp Image 2026-10-06 at 2.32.16 PM.jpeg" alt="">
+
+<img
+src="WhatsApp Image 2026-10-06 at 2.32.16 PM.jpeg"
+alt=""
+>
+
 </div>
 
 <div class="section-shade"></div>
 
+
 <div class="section-head">
-<h2 class="section-title">01 / THE CREATOR</h2>
-<span class="section-no">ABOUT</span>
+
+<h2 class="section-title">
+01 / THE CREATOR
+</h2>
+
+<span class="section-no">
+ABOUT
+</span>
+
 </div>
 
+
 <div class="about-grid">
+
 
 <div class="reveal">
 
 <p class="statement">
+
 I'm still figuring it out.
-<em>And that's the point.</em>
+<em>
+And that's the point.
+</em>
+
 </p>
+
 
 <div class="about-copy">
 
@@ -1521,12 +1863,16 @@ I'm Utsav — an 18-year-old graphic designer and filmmaker from Assam, currentl
 </p>
 
 <p>
-Alongside school, I've already explored <strong>freelancing</strong>, working on real creative projects and learning what it takes to turn ideas into work people can actually use.
+Alongside school, I've already explored
+<strong>freelancing</strong>,
+working on real creative projects and learning what it takes to turn ideas into work people can actually use.
 </p>
 
 <p>
 I'm not the most experienced person in the room.
-<strong>I'm the person learning fast enough to catch up.</strong>
+<strong>
+I'm the person learning fast enough to catch up.
+</strong>
 </p>
 
 <p>
@@ -1537,6 +1883,7 @@ I like dark worlds, cinematic frames, visual hierarchy and ideas that feel sligh
 
 </div>
 
+
 <div class="about-photo reveal">
 
 <img
@@ -1546,25 +1893,50 @@ alt="Utsav Das portrait"
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<section id="work" class="media-slide work-slide" data-bg="rockstar">
+
+<!-- MY CREATIONS -->
+
+<section
+id="work"
+class="media-slide work-slide"
+data-bg="rockstar"
+>
 
 <div class="section-media">
-<img src="IMG-20260131-WA0012.jpg" alt="">
+
+<img
+src="IMG-20260131-WA0012.jpg"
+alt=""
+>
+
 </div>
 
 <div class="section-shade"></div>
 
+
 <div class="section-head">
-<h2 class="section-title">02 / MY CREATIONS</h2>
-<span class="section-no">04 / 12 SHOWN</span>
+
+<h2 class="section-title">
+02 / MY CREATIONS
+</h2>
+
+<span class="section-no">
+04 / 12 SHOWN
+</span>
+
 </div>
 
+
 <div class="work-grid creations-grid">
+
+
+<!-- TANJIRO -->
 
 <a
 class="project creation-image reveal"
@@ -1573,20 +1945,36 @@ aria-label="Tanjiro artwork"
 >
 
 <div class="creation-img">
+
 <img
 src="IMG-20251020-WA0013.jpg"
 alt="Tanjiro poster design"
 >
+
 </div>
 
+
 <div class="project-info">
-<div class="project-no">01</div>
-<div class="project-name">TANJIRO</div>
-<div class="project-meta">Poster Design / Typography</div>
+
+<div class="project-no">
+01
+</div>
+
+<div class="project-name">
+TANJIRO
+</div>
+
+<div class="project-meta">
+Poster Design / Typography
+</div>
+
 </div>
 
 </a>
 
+
+
+<!-- FERRARI -->
 
 <a
 class="project creation-image reveal"
@@ -1595,20 +1983,36 @@ aria-label="Ferrari 488 GTB artwork"
 >
 
 <div class="creation-img">
+
 <img
 src="WA_1770989992816.jpeg"
 alt="Ferrari 488 GTB poster design"
 >
+
 </div>
 
+
 <div class="project-info">
-<div class="project-no">02</div>
-<div class="project-name">488 GTB</div>
-<div class="project-meta">Automotive Poster / Editorial Design</div>
+
+<div class="project-no">
+02
+</div>
+
+<div class="project-name">
+488 GTB
+</div>
+
+<div class="project-meta">
+Automotive Poster / Editorial Design
+</div>
+
 </div>
 
 </a>
 
+
+
+<!-- ROCKSTAR -->
 
 <a
 class="project creation-image reveal"
@@ -1617,20 +2021,36 @@ aria-label="Rockstar artwork"
 >
 
 <div class="creation-img">
+
 <img
 src="IMG-20260131-WA0012.jpg"
 alt="Rockstar music poster design"
 >
+
 </div>
 
+
 <div class="project-info">
-<div class="project-no">03</div>
-<div class="project-name">ROCKSTAR</div>
-<div class="project-meta">Music Poster / Collage Design</div>
+
+<div class="project-no">
+03
+</div>
+
+<div class="project-name">
+ROCKSTAR
+</div>
+
+<div class="project-meta">
+Music Poster / Collage Design
+</div>
+
 </div>
 
 </a>
 
+
+
+<!-- FLIXOSOL -->
 
 <a
 class="project creation-image reveal"
@@ -1639,50 +2059,97 @@ aria-label="Flixosol recruitment artwork"
 >
 
 <div class="creation-img">
+
 <img
 src="floxosol flyer.jpg"
 alt="Flixosol recruitment flyer"
 >
+
 </div>
 
+
 <div class="project-info">
-<div class="project-no">04</div>
-<div class="project-name">FLIXOSOL</div>
-<div class="project-meta">Recruitment Campaign / Art Direction</div>
+
+<div class="project-no">
+04
+</div>
+
+<div class="project-name">
+FLIXOSOL
+</div>
+
+<div class="project-meta">
+Recruitment Campaign / Art Direction
+</div>
+
 </div>
 
 </a>
 
+
 </div>
 
+
 <div class="more-creations reveal">
-<span>08 MORE PROJECTS IN THE ARCHIVE</span>
-<span>COMING SOON →</span>
+
+<span>
+08 MORE PROJECTS IN THE ARCHIVE
+</span>
+
+<span>
+COMING SOON →
+</span>
+
 </div>
 
 </section>
 
 
-<section class="media-slide services-slide" data-bg="flixosol">
+
+<!-- SERVICES -->
+
+<section
+class="media-slide services-slide"
+data-bg="flixosol"
+>
 
 <div class="section-media">
-<img src="floxosol flyer.jpg" alt="">
+
+<img
+src="floxosol flyer.jpg"
+alt=""
+>
+
 </div>
 
 <div class="section-shade"></div>
 
+
 <div class="section-head">
-<h2 class="section-title">03 / WHAT I BUILD</h2>
-<span class="section-no">SERVICES</span>
+
+<h2 class="section-title">
+03 / WHAT I BUILD
+</h2>
+
+<span class="section-no">
+SERVICES
+</span>
+
 </div>
+
 
 <div class="services">
 
+
 <article class="service reveal">
 
-<div class="service-no">01</div>
+<div class="service-no">
+01
+</div>
 
-<h3>Graphic Design</h3>
+<h3>
+Graphic Design
+</h3>
 
 <p>
 Campaign visuals, promotional graphics, compositions and visual systems built around hierarchy and impact.
@@ -1693,9 +2160,13 @@ Campaign visuals, promotional graphics, compositions and visual systems built ar
 
 <article class="service reveal">
 
-<div class="service-no">02</div>
+<div class="service-no">
+02
+</div>
 
-<h3>Video</h3>
+<h3>
+Video
+</h3>
 
 <p>
 Visual advertisements, promotional edits and cinematic content designed to make people stop scrolling.
@@ -1706,9 +2177,13 @@ Visual advertisements, promotional edits and cinematic content designed to make 
 
 <article class="service reveal">
 
-<div class="service-no">03</div>
+<div class="service-no">
+03
+</div>
 
-<h3>Film</h3>
+<h3>
+Film
+</h3>
 
 <p>
 Short-form storytelling, visual direction and experimental cinema where atmosphere matters as much as dialogue.
@@ -1716,20 +2191,34 @@ Short-form storytelling, visual direction and experimental cinema where atmosphe
 
 </article>
 
+
 </div>
 
 </section>
 
 
-<section class="media-slide outside-slide" data-bg="ferrari">
+
+<!-- OUTSIDE THE SCREEN -->
+
+<section
+class="media-slide outside-slide"
+data-bg="ferrari"
+>
 
 <div class="section-media">
-<img src="WA_1770989992816.jpeg" alt="">
+
+<img
+src="WA_1770989992816.jpeg"
+alt=""
+>
+
 </div>
 
 <div class="section-shade"></div>
 
+
 <div class="outside">
+
 
 <div class="boxing reveal">
 
@@ -1737,6 +2226,7 @@ Short-form storytelling, visual direction and experimental cinema where atmosphe
 src="images.jpg"
 alt="Utsav Das"
 >
+
 
 <div class="boxing-caption">
 
@@ -1752,13 +2242,25 @@ OUTSIDE THE SCREEN / DISCIPLINE
 <div class="reveal">
 
 <h2>
-CREATIVITY<br>
-<span style="color:transparent;-webkit-text-stroke:1px #777">
+
+CREATIVITY
+<br>
+
+<span
+style="
+color:transparent;
+-webkit-text-stroke:1px #777
+"
+>
 NEEDS
 </span>
+
 <br>
+
 DISCIPLINE.
+
 </h2>
+
 
 <p>
 Designer by practice. Filmmaker by obsession. Fighter by discipline. The things I learn outside a screen follow me back into the work.
@@ -1766,18 +2268,32 @@ Designer by practice. Filmmaker by obsession. Fighter by discipline. The things 
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<section id="contact" class="contact media-slide contact-slide" data-bg="tanjiro">
+
+<!-- CONTACT -->
+
+<section
+id="contact"
+class="contact media-slide contact-slide"
+data-bg="tanjiro"
+>
 
 <div class="section-media">
-<img src="IMG-20251020-WA0013.jpg" alt="">
+
+<img
+src="IMG-20251020-WA0013.jpg"
+alt=""
+>
+
 </div>
 
 <div class="section-shade"></div>
+
 
 <div>
 
@@ -1786,8 +2302,14 @@ Designer by practice. Filmmaker by obsession. Fighter by discipline. The things 
 </div>
 
 <h2>
-NEED A<br>
-<span>CREATIVE?</span>
+
+NEED A
+<br>
+
+<span>
+CREATIVE?
+</span>
+
 </h2>
 
 </div>
@@ -1798,6 +2320,7 @@ NEED A<br>
 <p>
 For design work, video advertisements, creative collaborations or film projects — I'm always open to making something worth remembering.
 </p>
+
 
 <a
 class="contact-btn"
@@ -1810,18 +2333,27 @@ MESSAGE ON WHATSAPP ↗
 
 </section>
 
+
 </main>
 
 
 <footer>
 
-<span>© UTSAV</span>
-<span>DESIGN / FILM / EXPERIMENT</span>
+<span>
+© UTSAV
+</span>
+
+<span>
+DESIGN / FILM / EXPERIMENT
+</span>
 
 </footer>
 
 
+
 <script>
+
+/* LOADER */
 
 window.addEventListener(
 'load',
@@ -1830,6 +2362,9 @@ window.addEventListener(
 700
 )
 );
+
+
+/* BASIC REVEAL */
 
 const obs=new IntersectionObserver(
 es=>es.forEach(
@@ -1841,14 +2376,19 @@ e.target.classList.add('visible')
 {threshold:.12}
 );
 
-document.querySelectorAll('.reveal').forEach(
+document
+.querySelectorAll('.reveal')
+.forEach(
 x=>obs.observe(x)
 );
 
 </script>
 
 
+
 <script>
+
+/* LOADER */
 
 window.addEventListener(
 'load',
@@ -1858,23 +2398,30 @@ window.addEventListener(
 )
 );
 
-const cursor=document.querySelector('.cursor'),
-ring=document.querySelector('.cursor-ring');
 
-let mx=innerWidth/2,
-my=innerHeight/2,
-rx=mx,
-ry=my;
+/* CUSTOM CURSOR */
+
+const cursor=document.querySelector('.cursor');
+const ring=document.querySelector('.cursor-ring');
+
+let mx=innerWidth/2;
+let my=innerHeight/2;
+
+let rx=mx;
+let ry=my;
+
 
 addEventListener(
 'pointermove',
 e=>{
 mx=e.clientX;
 my=e.clientY;
+
 cursor.style.left=mx+'px';
 cursor.style.top=my+'px'
 }
 );
+
 
 (function cursorLoop(){
 
@@ -1888,9 +2435,12 @@ requestAnimationFrame(cursorLoop)
 
 })();
 
-document.querySelectorAll(
-'a,button,.project'
-).forEach(
+
+/* CURSOR HOVER */
+
+document
+.querySelectorAll('a,button,.project')
+.forEach(
 el=>el.addEventListener(
 'mouseenter',
 ()=>{
@@ -1901,9 +2451,10 @@ ring.style.background='rgba(255,255,255,.06)'
 )
 );
 
-document.querySelectorAll(
-'a,button,.project'
-).forEach(
+
+document
+.querySelectorAll('a,button,.project')
+.forEach(
 el=>el.addEventListener(
 'mouseleave',
 ()=>{
@@ -1914,25 +2465,42 @@ ring.style.background='transparent'
 )
 );
 
+
+/* SECTION OBSERVER */
+
 const io=new IntersectionObserver(
 entries=>entries.forEach(
 e=>{
 if(e.isIntersecting){
+
 e.target.classList.add('visible');
-e.target.closest('.media-slide')?.classList.add('in-view')
+
+e.target
+.closest('.media-slide')
+?.classList.add('in-view')
+
 }
 }
 ),
 {threshold:.14}
 );
 
-document.querySelectorAll('.reveal').forEach(
+
+document
+.querySelectorAll('.reveal')
+.forEach(
 x=>io.observe(x)
 );
 
-document.querySelectorAll('.media-slide').forEach(
+
+document
+.querySelectorAll('.media-slide')
+.forEach(
 x=>io.observe(x)
 );
+
+
+/* NAVIGATION */
 
 const nav=document.querySelector('nav');
 
@@ -1945,26 +2513,42 @@ scrollY>80
 {passive:true}
 );
 
-// subtle parallax for background media
+
+/* PARALLAX */
+
 addEventListener(
 'scroll',
 ()=>{
-document.querySelectorAll('.media-slide').forEach(
+
+document
+.querySelectorAll('.media-slide')
+.forEach(
 sec=>{
-const r=sec.getBoundingClientRect(),
-mid=innerHeight/2,
-delta=(r.top+r.height/2-mid)*-.035,
-bg=sec.querySelector('.section-media');
+
+const r=sec.getBoundingClientRect();
+
+const mid=innerHeight/2;
+
+const delta=
+(r.top+r.height/2-mid)*-.035;
+
+const bg=
+sec.querySelector('.section-media');
 
 if(bg)
-bg.style.transform=`translate3d(0,${delta}px,0)`
+bg.style.transform=
+`translate3d(0,${delta}px,0)`
+
 }
 )
+
 },
 {passive:true}
 );
 
-// Magnetic micro-interaction
+
+/* MAGNETIC TEXT */
+
 for(
 const el of document.querySelectorAll('.magnetic')
 ){
@@ -1972,7 +2556,9 @@ const el of document.querySelectorAll('.magnetic')
 el.addEventListener(
 'pointermove',
 e=>{
-const r=el.getBoundingClientRect();
+
+const r=
+el.getBoundingClientRect();
 
 el.style.transform=
 `translate(${
@@ -1980,8 +2566,10 @@ el.style.transform=
 }px,${
 (e.clientY-r.top-r.height/2)*.08
 }px)`
+
 }
 );
+
 
 el.addEventListener(
 'pointerleave',
@@ -1990,9 +2578,29 @@ el.addEventListener(
 
 }
 
+
+/* HERO VIDEO FALLBACK PLAY */
+
+const heroVideo=
+document.querySelector('.hero-video');
+
+if(heroVideo){
+
+heroVideo.muted=true;
+
+const playHero=()=>{
+heroVideo.play().catch(()=>{});
+};
+
+window.addEventListener('load',playHero);
+document.addEventListener('visibilitychange',()=>{
+if(!document.hidden) playHero();
+});
+
+}
+
 </script>
 
-</body>
 
 <style>
 
@@ -2016,8 +2624,41 @@ max-width:90vw!important
 justify-self:start!important
 }
 
+
+/* MOBILE CREATIONS */
+
+.creations-grid .project{
+min-height:500px!important;
+width:100%
+}
+
+.creation-img{
+position:absolute!important;
+inset:0!important
+}
+
+.creation-img img{
+width:100%!important;
+height:100%!important;
+object-fit:cover!important
+}
+
+.project-info{
+position:relative!important;
+z-index:3!important
+}
+
+.more-creations{
+display:flex;
+flex-direction:column;
+gap:14px;
+align-items:flex-start
+}
+
 }
 
 </style>
 
+
+</body>
 </html>
